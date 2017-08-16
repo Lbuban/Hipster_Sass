@@ -1,0 +1,104 @@
+@import "_headerfooter";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+* {
+  margin: 0;
+}
+
+
+@mixin colorsize($width, $backgroundcolor){
+  width: $width;
+  background-color: $backgroundcolor;
+}
+
+.robinblue {
+    @include colorsize(25%,#6fcbd5);
+}
+
+.yellow {
+    @include colorsize(25%,#fbb535);
+}
+
+.red {
+    @include colorsize(25%,#df4b35);
+
+}
+
+.beige {
+    @include colorsize(25%,#ccbeac);
+}
+
+.brown {
+    @include colorsize(25%,#49423a);
+}
+
+.mint {
+  @include colorsize(25%,#a1d082);
+}
+
+@mixin linestyle($display, $justify-content){
+  display: $display;
+  justify-content: $justify-content;
+}
+.line1, .line2, .line3, .line4, .line5, .line6{
+  @include linestyle(flex, center)
+}
+.line7 {
+  display: flex;
+}
+
+.logo {
+  width: 50%;
+  padding-left: 75px;
+  padding-top: 100px;
+}
+
+.main-image {
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.line-icon {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    margin-right: 15px;
+    margin-left: 15px;
+  img {
+    border-left: 2px solid white;
+    padding-left: 15px;
+  }
+}
+
+$header1: 'Noto Sans', sans-serif;
+$primary-color: #fff;
+$margin-left: 15px;
+$margin-right: 15px;
+
+h2, p {
+  font-family: $header1;
+  color: $primary-color;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+p {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+h1 {
+    margin-right: $margin-right;
+    font-family: $header1;
+    color: $primary-color;
+}
+
+h2 {
+  border-bottom: 2px solid white;
+}
+
+@media (max-width: 1000px){
+  img {
+    display: none;
+  }
+}
